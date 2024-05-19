@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YWJzdHJhY3R8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+}
+
+header ul li{
+    margin: 0px 20px;
+}
+
+header ul li a{
+    color: black;
+    font-size: 20px;
+}
+
+header ul li:hover{
+    color: orange;
+    animation: wiggle .5s linear;
+}
+
+@keyframes wiggle {
+    25%{
+        transform: translateX(-5px);
+    }
+    50%{
+        transform: translateX(5px);
+    }
+    75%{
+        transform: translateX(-5px);
+    }
+    100%{
+        transform: translateX(5px);
+    }
+}
+
+header ul li a:hover{
+    color: orange;
+}
+
+header ul li:active{
+    transform: scale(90%);
+}
+
+header img{
+    width: 75px;
+}
+
+.my_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px auto;
+    flex-direction: column;
+    background-color: lightgoldenrodyellow;
+    width: 30%;
+    padding: 20px;
+    box-shadow: 0px 10px 10px 0px;
+    border-radius: 10px;
+}
+
+.email{
+    display: flex;
+    width: 70%;
+    justify-content: center;
+}
+
+.fa-solid.fa-check{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: white;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin: 0px 2px;
+}
+   
+.email_input{
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+    outline: none;
+    text-align: center;
+    border: none;
+}
+.copy_btn{
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 50%;
+    color: white;
+    background-color: blue;
+}
+
+.copy_btn:hover{
+    color: black;
+    background-color: orange;
+}
+
+.copy_btn:active{
+    transform: scale(90%);
+}
+
+.email_verified{
+    border: 2px solid green;
+}
+
+.prompt_style{
+    background-color: red;
+    color: white;
+    padding: 5px;
+    position: absolute;
+    top: 10%;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+    animation: prompt .5s linear;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+@keyframes prompt{
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .my_form{
+        margin: 50px auto;
+        width: 70%;
+    }
+
+    .prompt_style{
+        top: 3%;
+    }
+}
